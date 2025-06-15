@@ -32,13 +32,12 @@ public class TraversalPractice {
     public static void printLeafNodes(TreeNode node) {
         if (node == null) return;
 
-        printLeafNodes(node.left);
-
         if(node.left == null && node.right == null){
             System.out.println(node.data);
+        } else {
+            printLeafNodes(node.left);
+            printLeafNodes(node.right);
         }
-
-        printLeafNodes(node.right);
 
     }
 }
